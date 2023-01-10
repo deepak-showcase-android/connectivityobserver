@@ -2,6 +2,7 @@ package com.deepakbarad.connectivityobserver.framework.network
 
 import android.net.ConnectivityManager
 import android.net.Network
+import com.deepakbarad.connectivityobserver.framework.interfaces.INetworkObserver
 
 object NetworkObserver : ConnectivityManager.NetworkCallback() {
 
@@ -24,9 +25,4 @@ object NetworkObserver : ConnectivityManager.NetworkCallback() {
         super.onLost(network)
         subscribers.forEach { it.onDisconnected() }
     }
-}
-
-interface INetworkObserver {
-    fun onConnected()
-    fun onDisconnected()
 }

@@ -4,7 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.deepakbarad.connectivityobserver.framework.network.INetworkObserver
+import com.deepakbarad.connectivityobserver.framework.interfaces.INetworkObserver
 import com.deepakbarad.connectivityobserver.framework.network.NetworkObserver
 
 open class BaseActivity : AppCompatActivity(), INetworkObserver {
